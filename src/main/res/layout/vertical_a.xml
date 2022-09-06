@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    //---------------------------------------------------Textos--------------------------------------------------------
+    <TextView
+        android:id="@+id/Pantalla"
+        android:layout_width="363dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="60dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/Operacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pantalla" />
+    <TextView
+        android:id="@+id/Respuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pantalla" />
+    //-------------------------------------------------Botones----------------------------------------------------------
+    //--------------------------------------------------Rojos-----------------------------------------------------------
+    <Button
+        android:id="@+id/btnCircleAC"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/btn_red"
+        android:text="AC"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCircleDEL"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/btn_red"
+        android:text="DEL"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircleAC"
+        app:layout_constraintTop_toTopOf="parent" />
+    //-------------------------------------------------Azules-----------------------------------------------------------
+    <Button
+        android:id="@+id/btnCircleMasMenos"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/btn_blue"
+        android:text="+/-"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircleDEL"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btnCircleMas"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/btn_blue"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircleMasMenos"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btnCircleMenos"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_blue"
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle9"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircleMas" />
+
+    <Button
+        android:id="@+id/btnCirclePor"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_blue"
+        android:text="x"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle6"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircleMenos" />
+
+    <Button
+        android:id="@+id/btnCircleDiv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_blue"
+        android:text="%"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle3"
+        app:layout_constraintTop_toBottomOf="@+id/btnCirclePor" />
+    <Button
+        android:id="@+id/btnCircleEq"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_blue"
+        android:text="="
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircleAns"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircleDiv" />
+    //-------------------------------------------------Numeros-----------------------------------------------------------
+    <Button
+        android:id="@+id/btnCircle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="1"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircle4"/>
+    <Button
+        android:id="@+id/btnCircle2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="2"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircle5"/>
+    <Button
+        android:id="@+id/btnCircle3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="3"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle2"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircle6" />
+    <Button
+        android:id="@+id/btnCircle4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="4"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircle7" />
+
+    <Button
+        android:id="@+id/btnCircle5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="5"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle4"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircle8" />
+    <Button
+        android:id="@+id/btnCircle6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="6"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle5"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircle9" />
+    <Button
+        android:id="@+id/btnCircle7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="7"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircleAC" />
+
+    <Button
+        android:id="@+id/btnCircle8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="8"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle7"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircleDEL" />
+    <Button
+        android:id="@+id/btnCircle9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="9"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle8"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircleMasMenos" />
+    <Button
+        android:id="@+id/btnCircle0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCirclePunto"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircle2" />
+    <Button
+        android:id="@+id/btnCirclePunto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="."
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircle" />
+    <Button
+        android:id="@+id/btnCircleAns"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_grey"
+        android:text="ANS"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/btnCircle0"
+        app:layout_constraintTop_toBottomOf="@+id/btnCircle3" />
+    //--------------------------------------------------Extras-----------------------------------------------------------
+    <Button
+        android:id="@+id/btnCircleDiaNoche"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/day_chan"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
